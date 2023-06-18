@@ -1,0 +1,232 @@
+/* ||\\ CSS //|||||||||   |||||\ TS ||\\     //||||||| ||||||\
+   |||\\   //|||    |||   ||| ||\   |||\\   //|||      |||  ||\
+   ||| \\ // ||| JS |||||||||  ||\  ||| \\ // |||||||| |||   |||
+   |||  |||  |||    |||   ||||||||| |||  |||  |||      |||  ||/
+   |||  |||  ||||||||||   |||HTML||||||  |||  |||||||| ||||||/ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.page {
+  background: #16222a;
+  background: conic-gradient(#2196f3, #2197a0, #009688, #2197a0, #2197da);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+}
+
+.page .container .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.page .container .header h2 {
+  font-size: 22px;
+  color: #eee;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.page .container .header p {
+  font-size: 14px;
+  color: #ccc;
+  user-select: none;
+}
+
+.page .container .form {
+  width: 60%;
+  height: 50px;
+  margin: 40px auto 20px;
+  border: #3a6073 4px solid;
+  padding: 10px;
+  user-select: none;
+  box-shadow: 4px -4px 10px rgba(0, 0, 0, 0.3),
+    inset 4px -4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+@media (max-width: 550px) {
+  .page .container .form {
+    width: 100%;
+  }
+}
+
+.page .container .form .form-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.page .container .form .form-cont input {
+  height: 40px;
+  display: block;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.page .container .form .form-cont input::placeholder {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.page .container .form .form-cont button {
+  font-size: 30px;
+  color: #eee;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.page .container .task-box {
+  padding: 20px;
+  background-color: #55555533;
+  border: 3px solid #66666666;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.page .container .task-box .task {
+  padding: 10px;
+  border: 2px solid #66666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+  .page .container .task-box .task {
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.page .container .task-box .task .task-value {
+  color: #eee;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+
+@media (max-width: 550px) {
+  .page .container .task-box .task .task-value {
+    font-size: 15px;
+    white-space: normal;
+    text-overflow: clip;
+    line-height: 1.7;
+  }
+}
+
+.page .container .task-box .task .task-value::selection {
+  background-color: #004248b4;
+  color: #ccc;
+}
+
+.page .container .task-box .task .task-detals {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+  gap: 10px;
+  user-select: none;
+}
+
+.page .container .task-box .task .task-detals .date-now {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.page .container .task-box .task .task-detals .btn-task {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+  width: 100%;
+}
+
+.page .container .task-box .task .task-detals .btn-task .edite,
+.page .container .task-box .task .task-detals .btn-task .remove {
+  background-color: #ff000099;
+  padding: 5px;
+  border: 2px solid #3a6073;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.page .container .task-box .task .task-detals .btn-task .edite {
+  background-color: #2197da55;
+}
